@@ -1,5 +1,6 @@
 <template>
-    <div class="app-main-layout">
+  <loader v-if="loading" />
+    <div v-else class="app-main-layout">
     
   <Navbar @toggle-navbar="isOpen = !isOpen" />
   <Sidebar v-model="isOpen" />
@@ -21,6 +22,7 @@
 <script>
 import Navbar from '@/components/app/Navbar'
 import Sidebar from '@/components/app/Sidebar'
+import Loader from '../components/app/Loader.vue'
 
 export default {
   name: 'main-layout',
@@ -29,6 +31,15 @@ export default {
   },
   data: () => ({
     isOpen: true,
-  })
+    loading: true,
+  }),
+  async mounted() {
+    // if info not exists we need to fetch aditional info about user
+    if (!Object.keys(this.$store.getters.info).length) {
+      await this.$store.dispatch('fetchInfo')
+    }
+
+    this.loading = false
+  }
 }
 </script>

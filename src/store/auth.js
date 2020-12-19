@@ -30,8 +30,10 @@ export default {
           var user = firebase.auth().currentUser;  
           return user ? user.uid : null;
         },
-        async logout() {
+        //with commit we call mutations, with dispatch - methods
+        async logout({commit}) {
             await firebase.auth().signOut()
+            commit('clearInfo')
         }
     }
 }
