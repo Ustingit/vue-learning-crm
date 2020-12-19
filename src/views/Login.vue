@@ -68,7 +68,7 @@ import messages from '@/common/messages'
 export default {
   name: 'login',
   methods: {
-    onSubmit() {
+    async onSubmit() {
       if (this.$v.$invalid) {
         //activate validation
         this.$v.$touch()
@@ -80,7 +80,11 @@ export default {
         password: this.password
       }
 
-      this.$router.push('/')
+      try {
+        await this.$store.dispatch('login', formData)
+
+        this.$router.push('/')
+      } catch {}
     }
   },
   data: () => ({
