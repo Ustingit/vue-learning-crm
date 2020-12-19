@@ -34,7 +34,7 @@
       <small
         v-if="$v.password.$dirty && !$v.password.required"
        class="helper-text invalid">
-       Поле Password не должно бть пустым
+       Поле Password не должно быть пустым
        </small>
        <small
         v-else-if="$v.password.$dirty && !$v.password.minLength"
@@ -63,6 +63,7 @@
 
 <script>
 import { email, required, minLength } from 'vuelidate/lib/validators'
+import messages from '@/common/messages'
 
 export default {
   name: 'login',
@@ -89,6 +90,11 @@ export default {
   validations: {
     email: { email, required },
     password: { required, minLength: minLength(6) }
+  },
+  mounted() {
+    if (messages[this.$route.query.message]) {
+      this.$message(messages[this.$route.query.message])
+    }
   }
 }
 </script>
