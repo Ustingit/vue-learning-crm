@@ -15,16 +15,11 @@ export default {
                 throw e
             }
         },
-        async updateInfo({commit, dispatch}, toUpdate) {
+        async updateInfo({commit, dispatch, getters}, toUpdate) {
             try {
-                console.log('1', toUpdate)
                 const uid = await dispatch('getUid')
-                console.log('2', getters.info)
-                console.log('3', {...getters.info})
                 const updateData = {...getters.info, ...toUpdate}
-                console.log("after aing recor,before info upodate", updateData)
                 await firebase.database().ref(`/users/${uid}/info`).update(updateData)
-                console.log('4')
                 commit('setInfo', updateData)
             } catch(e) {
                 commit('setError', e)

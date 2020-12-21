@@ -144,8 +144,6 @@ export default {
           })
 
           const bill = this.type === 'income' ? this.sum + this.info.bill : this.info.bill - this.sum;
-          console.log('before updating 11', bill)
-          console.log('before updating 22', {bill})
           await this.$store.dispatch('updateInfo', {bill})
           this.$message('Запись добавлена')
           this.$v.$reset()
