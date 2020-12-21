@@ -8,6 +8,7 @@ import store from './store';
 import messagePlugin from './common/message.plugin'
 import dateFilter from './filters/date.filter';
 import currencyFilter from './filters/currency.filter';
+import tooltipDirective from './directives/tooltip.directive.js';
 import './registerServiceWorker';
 import 'materialize-css/dist/js/materialize.min';
 
@@ -17,6 +18,7 @@ import 'firebase/database';
 Vue.config.productionTip = false;
 Vue.filter('dateFilter', dateFilter)
 Vue.filter('currencyfilter', currencyFilter)
+Vue.directive('tooltip', tooltipDirective) //can be called as 'v-tooltip' on views
 Vue.use(Vuelidate)
 Vue.use(messagePlugin)
 Vue.component('Loader', Loader)
