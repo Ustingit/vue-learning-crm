@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import Vuelidate from 'vuelidate'
+import Paginate from 'vuejs-paginate'
 import firebase from 'firebase/app';
 import Loader from './components/app/Loader.vue'
 import router from './router';
@@ -22,6 +23,7 @@ Vue.directive('tooltip', tooltipDirective) //can be called as 'v-tooltip' on vie
 Vue.use(Vuelidate)
 Vue.use(messagePlugin)
 Vue.component('Loader', Loader)
+Vue.component('Paginate', Paginate)
 
 firebase.initializeApp({});
 
