@@ -6,5 +6,14 @@
     "Menu_History": "History",
     "Menu_Planning": "Planning",
     "Menu_Add": "Add new item",
-    "Menu_Categories": "Categories"
+    "Menu_Categories": "Categories",
+    "pageTitle_Categories": "Categories",
+    "pageTitle_Detail": "Detail",
+    "pageTitle_History": "History",
+    "pageTitle_Home": "Home",
+    "pageTitle_Login": "Login",
+    "pageTitle_Planning": "Planning",
+    "pageTitle_Profile": "Profile",
+    "pageTitle_Record": "Record",
+    "pageTitle_Register": "Register"
 }

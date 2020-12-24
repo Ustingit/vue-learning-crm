@@ -42,6 +42,11 @@ export default {
       this.currency = await this.$store.dispatch('fetchCurrency')
       this.loading = false
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_Home')
+    }
   }
 };
 </script>

@@ -70,6 +70,11 @@ export default {
   },
   computed: {
     ...mapGetters(['info']) //we can call this ith name 'info'
+  },
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_Planning')
+    }
   }
 }
 </script>

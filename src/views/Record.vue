@@ -154,6 +154,11 @@ export default {
         }
       } catch(e) {}
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_Record')
+    }
   }
 }
 </script>

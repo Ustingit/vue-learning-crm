@@ -31,6 +31,7 @@
 import HistoryTable from './HistoryTable'
 import paginationMixin from '@/mixins/pagination.mixin.js'
 import { Pie } from 'vue-chartjs'
+import localizeFilter from '@/filters/localize.filter'
 
 export default {
   name: 'History',
@@ -39,6 +40,11 @@ export default {
   components: {
     HistoryTable
   }, 
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_History')
+    }
+  },
   data: () => ({
     records: [],
     categories: [],

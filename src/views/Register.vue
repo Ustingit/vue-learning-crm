@@ -118,6 +118,11 @@ export default {
         this.$router.push('/')
       } catch {}
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_Register')
+    }
   }
 }
 </script>

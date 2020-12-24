@@ -75,6 +75,11 @@ export default {
          });
       } catch {}
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_Profile')
+    }
   }
 }
 </script>

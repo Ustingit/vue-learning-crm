@@ -49,6 +49,11 @@ export default {
 
       this.loading = false
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$title('pageTitle_Detail')
+    }
   }
 }
 </script>

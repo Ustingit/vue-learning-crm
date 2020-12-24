@@ -7,5 +7,14 @@
     "Menu_History": "История",
     "Menu_Planning": "Планирование",
     "Menu_Add": "Новая запись",
-    "Menu_Categories": "Категории"
+    "Menu_Categories": "Категории",
+    "pageTitle_History": "История",
+    "pageTitle_Categories": "Категории",
+    "pageTitle_Detail": "Подробности",
+    "pageTitle_Home": "Шлавная",
+    "pageTitle_Login": "Авторизация",
+    "pageTitle_Planning": "Планирование",
+    "pageTitle_Profile": "Профиль пользователя",
+    "pageTitle_Record": "Запись",
+    "pageTitle_Register": "Регистрация пользователя"
 }
